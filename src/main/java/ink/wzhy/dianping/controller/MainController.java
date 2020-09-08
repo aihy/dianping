@@ -2,10 +2,7 @@ package ink.wzhy.dianping.controller;
 
 import ink.wzhy.dianping.domain.CommentDO;
 import ink.wzhy.dianping.service.CommentsService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -22,8 +19,8 @@ public class MainController {
     }
 
     @PostMapping("comment")
-    public String insertComment(String comment) {
+    public String insertComment(@RequestBody CommentDO comment) {
         commentsService.insertComment(comment);
-        return comment;
+        return comment.getComment();
     }
 }

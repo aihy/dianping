@@ -18,7 +18,7 @@ public class CommentsService {
         return commentDOS;
     }
 
-    public void insertComment(String comment) {
-        commentsDAO.insertComment(comment);
+    public void insertComment(CommentDO comment) {
+        commentsDAO.insertComment(comment.getComment());
     }
 }
