@@ -19,7 +19,7 @@ public class MainController {
     }
 
     @PostMapping("comment")
-    public String insertComment(@RequestBody CommentDO comment) {
+    public String insertComment(CommentDO comment) {
         commentsService.insertComment(comment);
         return comment.getComment();
     }
