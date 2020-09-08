@@ -10,5 +10,9 @@
         select comment, gmt_create
         from comments
     </select>
+    <insert id="insertComment">
+        insert into comments(comment, gmt_create, gmt_modified)
+        values(#{comment}, now(), now())
+    </insert>
 
 </mapper>

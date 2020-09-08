@@ -9,4 +9,5 @@ import java.util.List;
 @Mapper
 public interface CommentsDAO {
     List<CommentDO> getComments();
+    int insertComment(String comment);
 }
