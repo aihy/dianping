@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
 
-@RestController("api")
+@RequestMapping("/api")
 public class MainController {
     @Resource
     private CommentsService commentsService;
